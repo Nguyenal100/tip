@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bRU-Ze-IJW">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tip Calculator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-gp-uqJ">
+                                <rect key="frame" x="0.0" y="136.5" width="375" height="438.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-Bg-uhC" userLabel="Bill">
+                                        <rect key="frame" x="37.5" y="0.0" width="300" height="34.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-GP-QHq">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="34.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="JpY-Jb-Uoo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edT-cJ-HSC">
+                                                <rect key="frame" x="128" y="0.0" width="172" height="34.5"/>
+                                                <color key="backgroundColor" red="0.94833301130566539" green="0.63227908685679624" blue="1" alpha="0.53482614436619713" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="CGa-sQ-1e5"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.43607626854925785" green="1" blue="0.16802528726369592" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQN-cs-SOZ" userLabel="Space View">
+                                        <rect key="frame" x="37.5" y="34.5" width="300" height="129"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="129" id="9eo-bi-C3D"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="R5q-u2-dMx" userLabel="Tip">
+                                        <rect key="frame" x="37.5" y="168" width="300" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-Qb-qhA">
+                                                <rect key="frame" x="0.0" y="0.0" width="239" height="25"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dV-Ak-Rud">
+                                                <rect key="frame" x="247" y="0.0" width="53" height="25"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEN-aQ-9Y9">
+                                        <rect key="frame" x="37.5" y="253.5" width="300" height="18"/>
+                                        <color key="backgroundColor" red="0.66666668653488159" green="0.33805384795139282" blue="0.65666443552447284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="LSf-KQ-sqj"/>
+                                        </constraints>
+                                    </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ka9-ZA-abK">
+                                        <rect key="frame" x="37.5" y="333" width="300" height="23"/>
+                                        <color key="backgroundColor" red="0.66666668650000005" green="0.33805384799999999" blue="0.65666443549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="SP7-eL-aj3"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="15%"/>
+                                            <segment title="18%"/>
+                                            <segment title="20%"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.85698896359999999" green="0.69253635189999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="iZU-VQ-MCC"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fFs-XK-W69" userLabel="Total">
+                                        <rect key="frame" x="37.5" y="413.5" width="300" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zu-cv-vAA">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-sd-xNr">
+                                                <rect key="frame" x="49.5" y="0.0" width="250.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gQN-cs-SOZ" firstAttribute="width" secondItem="R5q-u2-dMx" secondAttribute="width" id="1Gf-ua-er7"/>
+                                    <constraint firstItem="R5q-u2-dMx" firstAttribute="width" secondItem="qEN-aQ-9Y9" secondAttribute="width" id="770-HR-33c"/>
+                                    <constraint firstItem="Ka9-ZA-abK" firstAttribute="width" secondItem="Bct-gp-uqJ" secondAttribute="width" multiplier="0.8" id="9mu-Qj-7G7"/>
+                                    <constraint firstItem="fFs-XK-W69" firstAttribute="width" secondItem="Ka9-ZA-abK" secondAttribute="width" id="NVz-sG-KDg"/>
+                                    <constraint firstItem="qEN-aQ-9Y9" firstAttribute="width" secondItem="Ka9-ZA-abK" secondAttribute="width" id="aZA-GN-nbD"/>
+                                    <constraint firstItem="fd6-Bg-uhC" firstAttribute="width" secondItem="gQN-cs-SOZ" secondAttribute="width" id="rdA-Lq-mmH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85698896357019783" green="0.69253635186908924" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Bct-gp-uqJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H4p-x5-Hzw"/>
+                            <constraint firstItem="Bct-gp-uqJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kti-mN-7Gv"/>
+                            <constraint firstItem="Bct-gp-uqJ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="oaP-qu-brY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8eP-92-3bv" appends="YES" id="Oq2-5x-a9x"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="0sm-Fq-JPv"/>
+                    <connections>
+                        <outlet property="billField" destination="edT-cJ-HSC" id="YyW-GJ-rsR"/>
+                        <outlet property="tipControl" destination="Ka9-ZA-abK" id="sjV-BS-W72"/>
+                        <outlet property="tipLabel" destination="0dV-Ak-Rud" id="gNC-zh-4vt"/>
+                        <outlet property="totalLabel" destination="yeF-sd-xNr" id="WYy-H0-4HA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8eP-92-3bv">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="MfG-ba-KmR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1037.5999999999999" y="106.59670164917542"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BwQ-Xx-HXl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bRU-Ze-IJW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FX7-6z-Ovb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XJl-l0-xOw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Oo-Xv-x5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="106.79347826086958"/>
+        </scene>
+    </scenes>
+</document>
